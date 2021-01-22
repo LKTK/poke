@@ -22,7 +22,7 @@ const userSlice = createSlice({
 
 export const { createUser, setGender } = counterSlice.actions
 
-export const USER_GENDER_FEMALE = 'F';
-export const USER_GENDER_MALE = 'M';
+export const USER_GENDER_FEMALE = 'F'
+export const USER_GENDER_MALE = 'M'
 
-export default userSlice.reducer;
+export default userSlice.reducer
