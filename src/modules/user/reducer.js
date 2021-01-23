@@ -1,6 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { v4 as uuidv4 } from 'uuid';
 
+export const USER_GENDER_FEMALE = 'F'
+export const USER_GENDER_MALE = 'M'
+
 const userSlice = createSlice({
     name: 'user',
     initialState: {
@@ -20,9 +23,6 @@ const userSlice = createSlice({
     }
 })
 
-export const { createUser, setGender } = counterSlice.actions
-
-export const USER_GENDER_FEMALE = 'F'
-export const USER_GENDER_MALE = 'M'
+export const { createUser, setGender } = userSlice.actions
 
 export default userSlice.reducer
