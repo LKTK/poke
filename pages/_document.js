@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-class ZksDocument extends Document {
+class LonPokeDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
@@ -14,10 +14,8 @@ class ZksDocument extends Document {
             <meta charset="utf-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta name="keywords" content="software, salao, beleza, sistema, programa, mobilidade, nuvem, melhor, facil, usar, spa, beleza, bem, estar, estetica, clinica, one, barbearia" />
-            <meta name="description" content="Sistema de agendamento para Salões de Beleza, Barbearias, Spas e Clínicas de Estética!" />
             <meta name="viewport" content="width=device-width" />
-            <meta name="author" content="Luke Valeenz" />
+            <meta name="author" content="LoN Taku" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
@@ -32,4 +30,4 @@ class ZksDocument extends Document {
   }
 }
 
-export default ZksDocument
+export default LonPokeDocument

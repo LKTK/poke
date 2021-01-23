@@ -1,13 +1,16 @@
 import { storeWrapper, persistor } from "src/store";
 import { PersistGate } from 'redux-persist/integration/react'
+import ThemeProvider from 'src/config/Theme'
 import "normalize.css"
 
-function ZksApp({ Component, pageProps }) {
+function LonPokeApp({ Component, pageProps }) {
     return (
-        <PersistGate loading={null} persistor={persistor}>
-            <Component {...pageProps} />
-        </PersistGate>
+        <ThemeProvider>
+            <PersistGate loading={null} persistor={persistor}>
+                <Component {...pageProps} />
+            </PersistGate>
+        </ThemeProvider>
     )
 }
 
-export default storeWrapper.withRedux(ZksApp)
+export default storeWrapper.withRedux(LonPokeApp)

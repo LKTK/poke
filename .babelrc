@@ -1,0 +1,58 @@
+{
+    "presets": [
+        "next/babel"
+    ],
+    "env": {
+        "production": {
+            "presets": [
+                "react-optimize",
+                "transform-react-remove-prop-types",
+                [
+                    "groundskeeper-willie",
+                    {
+                        "removeConsole": true,
+                        "removeDebugger": true,
+                        "removePragma": true
+                    }
+                ],
+                "babel-plugin-loop-optimizer",
+                "closure-elimination",
+                "preval",
+                "faster.js",
+                "object-to-json-parse"
+            ]
+        }
+    },
+    "plugins": [
+        "macros",
+        "fast-async",
+        "ramda",
+        [
+            "babel-plugin-import",
+            {
+                "libraryName": "@material-ui/core",
+                "libraryDirectory": "esm",
+                "camel2DashComponentName": false
+            },
+            "core"
+        ],
+        [
+            "babel-plugin-import",
+            {
+                "libraryName": "@material-ui/lab",
+                "libraryDirectory": "esm",
+                "camel2DashComponentName": false
+            },
+            "lab"
+        ],
+        [
+            "babel-plugin-import",
+            {
+                "libraryName": "@material-ui/icons",
+                "libraryDirectory": "esm",
+                "camel2DashComponentName": false
+            },
+            "icons"
+        ]
+    ]
+}
